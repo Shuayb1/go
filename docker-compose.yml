@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.6.1-alpine
+    volumes:
+      - .:/go/src/go
+    working_dir: /go/src/go
+    command: go run apitest.go
